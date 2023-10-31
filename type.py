@@ -4,8 +4,8 @@ import pyautogui
 # Delay before starting (adjust as needed)
 time.sleep(3)
 
-# Open WhatsApp and navigate to the chat window of the recipient
-# Ensure that the WhatsApp application is already open and visible on your screen
+# Open Any app or code space 
+# Ensure that the application or codespace is already open and visible on your screen
 
 # Move the mouse to the coordinates of the WhatsApp chat window
 # Replace the (x, y) values with the appropriate coordinates
@@ -15,7 +15,7 @@ y = 200  # Replace with the y-coordinate of the chat window
 pyautogui.moveTo(x, y)
 
 # Read the contents of the text file and remove leading tab spaces
-file_path = r"C:\Users\Praneswar\.vscode\Python\Python programs\type.txt"
+file_path = r"C:\Python programs\type.txt" #add your location
 with open(file_path, "r", encoding="utf-8") as file:
     lines = file.readlines()
 
@@ -27,10 +27,10 @@ contents = [line.lstrip() for line in lines]
 contents = "".join(contents)
 
 # Set the typing speed (adjust as needed)
-typing_speed =  5 # Words per minute
+typing_speed =  8 # Words per minute
 
 # Calculate the delay between each character
-delay = 0.65 # Delay in seconds
+delay = 0.05 # Delay in seconds
 
 # Type the contents of the file with the desired typing speed
 for char in contents:
