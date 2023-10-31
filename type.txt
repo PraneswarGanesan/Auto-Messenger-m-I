@@ -1,0 +1,19 @@
+#include<iostream>
+#include<cstdio>
+#include<cstring>
+#include<algorithm>
+using namespace std;
+const int rng=100;
+const int zero=50;
+int dir[8][2]={{-2,-1},{-2,1},{-1,-2},{-1,2},{1,-2},{1,2},{2,-1},{2,1}};
+int d[rng][rng];
+int q[rng*rng][2],tail;
+void add(int r1,int c1,int d1)
+{
+    if(d[r1][c1]==-1)
+    {
+        d[r1][c1]=d1;
+        q[tail][0]=r1;
+        q[tail++][1]=c1;
+    }
+}
